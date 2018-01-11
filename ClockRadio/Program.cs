@@ -10,6 +10,9 @@ namespace ClockRadio
     {
         static void Main(string[] args)
         {
+            Console.BackgroundColor = ConsoleColor.Blue;
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.White;
             ClockRadioClass clockRadioProgram = new ClockRadioClass();
             clockRadioProgram.alarmClockFunction();
         }

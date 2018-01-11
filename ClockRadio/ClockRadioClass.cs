@@ -10,6 +10,7 @@ namespace ClockRadio
     {
         private string currentTime = "10:30 AM";
         private string currentAlarmState = "OFF";
+        //private bool currentAlarmState = false;
         private string currentAlarmTime = "12:00 PM";
         private string currentRadioStation = "99.1 FM";
 
@@ -28,16 +29,13 @@ namespace ClockRadio
                         ChangeTime();
                         break;
                     case "S":
-                        Console.WriteLine("The current state of the alarm is " + currentAlarmState + ". Please enter a new state of the alarm.");
-                        currentAlarmState = Console.ReadLine();
+                        ChangeAlarmState();
                         break;
                     case "A":
-                        Console.WriteLine("The alarm is currently set to " + currentAlarmTime + ". Please enter a new alarm time.");
-                        currentAlarmTime = Console.ReadLine();
+                        ChangeAlarmTime();
                         break;
                     case "R":
-                        Console.WriteLine("The radio is currently set to " + currentRadioStation + ". Please enter a new radio station.");
-                        currentRadioStation = Console.ReadLine();
+                        ChangeRadioStation();
                         break;
                     case "E":
                         Environment.Exit(0);
@@ -58,5 +56,31 @@ namespace ClockRadio
             currentTime = Console.ReadLine();
             Console.WriteLine("\n");
         }
+
+        private void ChangeAlarmState()
+        {
+            Console.WriteLine("The current state of the alarm is " + currentAlarmState + ". Please enter a new state of the alarm.");
+
+            //currentAlarmState
+
+            currentAlarmState = Console.ReadLine();
+            Console.WriteLine("\n");
+        }
+
+        private void ChangeAlarmTime()
+        {
+            Console.WriteLine("The alarm is currently set to " + currentAlarmTime + ". Please enter a new alarm time.");
+            currentAlarmTime = Console.ReadLine();
+            Console.WriteLine("\n");
+        }
+
+        private void ChangeRadioStation()
+        {
+            Console.WriteLine("The radio is currently set to " + currentRadioStation + ". Please enter a new radio station.");
+            currentRadioStation = Console.ReadLine();
+            Console.WriteLine("\n");
+        }
+
+
     }
 }
